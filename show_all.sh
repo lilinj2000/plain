@@ -6,3 +6,5 @@ pgrep -a mass
 pgrep -a proxy
 
 pgrep -a stick
+
+pgrep -a track

@@ -5,4 +5,8 @@ pkill mass
 
 pkill stick
 
+pkill track
+
 pkill proxy
+
+
