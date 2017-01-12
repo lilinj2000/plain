@@ -7,6 +7,8 @@ pkill stick
 
 pkill track
 
+pkill qatar
+
 pkill proxy
 
 

@@ -8,3 +8,5 @@ pgrep -a proxy
 pgrep -a stick
 
 pgrep -a track
+
+pgrep -a qatar
