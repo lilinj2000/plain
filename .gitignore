@@ -1,5 +1,2 @@
 *~
-*.log
-*.con
-*.so*
-*.db
+libs

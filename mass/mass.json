@@ -1,0 +1,33 @@
+{
+    "cata_md": {
+        "broker_id": "", 
+        "flow_path": "./", 
+        "front_address": "tcp://180.168.146.187:10010", 
+        "password": "", 
+        "protocol": "tcp", 
+        "user_id": ""
+    }, 
+    "log": {
+        "level": "info", 
+        "sinks": [
+            {
+                "sink": {
+                    "level": "trace", 
+                    "type": "stdout_sink_mt"
+                }
+            }, 
+            {
+                "sink": {
+                    "file_name": "mass.log", 
+                    "max_file_size": 5000000, 
+                    "max_files": 10, 
+                    "type": "rotating_file_sink_mt"
+                }
+            }
+        ]
+    }, 
+    "mass": {
+        "pub_addr": ">tcp://zap-forwarder:9990", 
+        "pull_addr": ">tcp://zap-streamer:9981"
+    }
+}

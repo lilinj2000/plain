@@ -1,0 +1,39 @@
+version: '3'
+services:
+  zap-forwarder:
+    build:
+      context: .
+    image: plain:latest
+    working_dir: /zap
+    command: ./zap -c forwarder.json
+  zap-streamer:
+    build:
+      context: .
+    image: plain:latest
+    working_dir: /zap
+    command: ./zap -c streamer.json
+    
+  qatar:
+    build:
+      context: .
+    image: plain:latest
+    working_dir: /qatar
+    command: ./qatar
+    links:
+    - zap-forwarder
+    - zap-streamer
+    depends_on:
+    - mass
+    volumes:
+    - ./data:/qatar/data
+
+  mass:
+    build:
+      context: .
+    image: plain:latest
+    working_dir: /mass
+    command: ./mass
+    links:
+    - zap-forwarder
+    - zap-streamer
+ 
