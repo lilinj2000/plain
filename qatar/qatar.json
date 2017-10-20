@@ -27,6 +27,7 @@
         ]
     }, 
     "qatar": {
+	"batch_size": 1024,
         "db": "data/qatar.db", 
         "push_addr": ">tcp://zap-streamer:9980", 
         "sub_addr": ">tcp://zap-forwarder:9991"
